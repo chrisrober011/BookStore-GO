@@ -12,13 +12,13 @@ var (
 )
 
 func Connect() {
-	d, err := gorm.Open("mysql", "root:root1234@/BookStore?charset=utf8&SpareTime=true&loc=Local") //first calling mysql the username:Password@/and the rest code
+	d, err := gorm.Open("mysql", "root:root1234@/BookStore?charset=utf8&loc=Local") //first calling mysql the username:Password@/and the rest code
 	if err != nil {
 		panic(err)
 	}
 	db = d
 }
 
-func GetDB() *grom.DB{
+func GetDB() *gorm.DB{
 	return db
 }
